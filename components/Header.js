@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Header() {
   return (
     <View style={styles.headerContainer}>
-      <Text style={styles.headerText}>Welcome to Little Lemon</Text>
+      <Text style={styles.headerText}> Little Lemon Resteraunt</Text>
 
     </View>
   );
@@ -12,13 +12,14 @@ export default function Header() {
 const styles = StyleSheet.create({
   headerContainer: {
     paddingTop: 30,
-    backgroundColor: '#495E57',
+    backgroundColor: '#F4CE14',
+   
 
   },
   headerText: { 
    textAlign: 'center',
-   padding: 40,
-   fontSize: '25',
-   color: '#F4CE14',
+   padding: 15,
+   fontSize: '30',
+   color: '#495E57',
   },
 });

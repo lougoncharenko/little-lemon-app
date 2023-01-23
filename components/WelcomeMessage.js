@@ -1,9 +1,9 @@
-import {View, Text} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function WelcomeMessage() {
     return (
       <View style={styles.WelcomeMessageContainer}>
-        <Text style={styles.headerText}>Welcome to Little Lemon</Text>
+        <Text style={styles.WelcomeMessageText}>Welcome to Little Lemon</Text>
       </View>
     );
   }
@@ -11,11 +11,13 @@ export default function WelcomeMessage() {
   const styles = StyleSheet.create({
     WelcomeMessageContainer: {
       marginTop: 40,
-      marginLeft: 40,
+      backgroundColor: '#495E57',
     },
     WelcomeMessageText: { 
      textAlign: 'center',
-     fontSize: '25',
+     padding: 15,
+     fontSize: '35',
+     color: 'white',
     },
   });
   
