@@ -18,8 +18,5 @@ const styles = StyleSheet.create({
    textAlign: 'center',
    padding: 40,
    fontSize: '25',
- 
-
-
   },
 });
