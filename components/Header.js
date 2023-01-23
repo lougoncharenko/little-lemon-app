@@ -11,8 +11,8 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    flex: 0.2,
-    backgroundColor: '#F4CE14'
+    backgroundColor: '#F4CE14',
+
   },
   headerText: { 
    textAlign: 'center',
