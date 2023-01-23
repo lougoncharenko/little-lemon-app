@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+//components
+import Header from './components/Header';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Welcome to Little Lemon!</Text>
+      <Header />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'flex-start',
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 55,
   },
 });
