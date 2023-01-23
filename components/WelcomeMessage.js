@@ -4,6 +4,15 @@ export default function WelcomeMessage() {
     return (
       <View style={styles.WelcomeMessageContainer}>
         <Text style={styles.WelcomeMessageText}>Welcome to Little Lemon</Text>
+        <View style={styles.WelcomeMessageContent}>
+            <Text style={styles.WelcomeMessageContentText}>
+                Little Lemon is a charming neighborhood bistro that
+                serves farm-to-table food and classic cocktails in a
+                lively but casual enviroment. We would love to have you
+                as our guests in our fine establishment and hear more 
+                about your experience with us!
+            </Text>
+        </View>
       </View>
     );
   }
@@ -19,5 +28,14 @@ export default function WelcomeMessage() {
      fontSize: '35',
      color: 'white',
     },
+    WelcomeMessageContent: {
+        marginTop: 40,
+        alignItems: 'center',
+        padding: 15,
+    },
+    WelcomeMessageContentText: {
+        color: 'white',
+        fontSize: 20,
+    }
   });
   
