@@ -23,6 +23,12 @@
 - Download `Expo Go` app on your phone
 - Scan the QR code with the app
 
+<div align="center">
+
+<img width="911" alt="Screen Shot 2023-01-16 at 1 40 00 PM" src="Simulator Screen Shot - iPhone SE (3rd generation) - 2023-01-29 at 17.30.23.png">
+
+</div>
+
 ## Core Technologies & Concepts Used
 - [TypeScript](https://www.typescriptlang.org)
 - [React Native Framework](https://reactnative.dev)
