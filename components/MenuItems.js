@@ -34,7 +34,11 @@ export default function MenuItems() {
         </View>
         <FlatList
           data={menuItemsToDisplay}
-          renderItem={({item}) => <Text style={styles.menuItem}>{item.name}:  {item.price} </Text>}
+          renderItem={({item}) => <View style={styles.menuItems}>
+            <Text style={styles.menuItem}>{item.name}: </Text>
+            <Text style={styles.menuItem}>{item.price} </Text>
+            </View>}
+            keyExtractor = {(item) => item.id}
         />
       </View>
     );
@@ -55,14 +59,18 @@ const styles = StyleSheet.create({
      color: '#EDEFEE',
      textDecorationLine: 'underline',
     },
+    menuItems: {
+      padding: 15,
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'space-between'
+
+    },
     menuItem: {
       padding: 10,
-      fontSize: 18,
+      fontSize: 25,
       height: 44,
       color: '#EDEFEE',
-      paddingLeft: 40,
-      paddingHorizontal: 15,
-      display: 'flex'
     },
   });
   
