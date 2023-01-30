@@ -1,6 +1,6 @@
 import React from "react";
 
-import {View, Text, FlatList, StyleSheet, SectionList} from 'react-native';
+import {View, Text, StyleSheet, SectionList} from 'react-native';
 
 const Appetizers = [
   {id: '1', name: 'Hummus', price: '$5.00' },
