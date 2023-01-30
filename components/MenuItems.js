@@ -2,116 +2,45 @@ import React from "react";
 
 import {View, Text, FlatList, StyleSheet, SectionList} from 'react-native';
 
-// const menuData = [
-//   {
-//     title: 'Appetizers',
-//     data: [
-//     { name: 'Hummus', price: '$5.00', id: '1A' },
-//     { name: 'Moutabal', price: '$5.00', id: '2B' },
-//     { name: 'Falafel', price: '$7.50', id: '3C' },
-//     { name: 'Marinated Olives', price: '$5.00', id: '4D' },
-//     { name: 'Kofta', price: '$6.00', id: '5E' },
-//     { name: 'Eggplant Salad', price: '$9.50', id: '6F' },
-//     ],
-//   },
-//   {
-//     title: 'Main Dishes',
-//     data: [
-//     { name: 'Lentil Burger', price: '$12.50', id: '7G' },
-//     { name: 'Smoked Salmon', price: '$18.00', id: '8H' },
-//     { name: 'Kofta Burger', price: '$12.50', id: '9I' },
-//     { name: 'Turkish Kebab', price: '$15.50', id: '10J' },
-//     ],
-//   },
-//   {
-//     title: 'Sides',
-//     data: [
-//     { name: 'Fries', price: '$8.00', id: '11K' },
-//     { name: 'Buttered Rice', price: '$4.50', id: '12L' },
-//     { name: 'Bread Sticks', price: '$5.50', id: '13M' },
-//     { name: 'Pita Pocket', price: '$3.00', id: '14N' },
-//     { name: 'Lentil Soup', price: '$6.75', id: '15O' },
-//     { name: 'Greek Salad', price: '$8.50', id: '16Q' },
-//     { name: 'Rice Pilaf', price: '$7.00', id: '17R' },
-//     ],
-//   },
-//   {
-//     title: 'Desserts',
-//     data: [
-//     { name: 'Baklava', price: '$5.00', id: '18S' },
-//     { name: 'Tartufo', price: '$5.00', id: '19T' },
-//     { name: 'Tiramisu', price: '$6.00', id: '20U' },
-//     { name: 'Panna Cotta', price: '$5.00', id: '21V' },
-//     ],
-//   },
-// ];
-
-// const menuItemsToDisplay = [
-//     { name: 'Hummus', price: '$5.00', id: '1A' },
-//     { name: 'Moutabal', price: '$5.00', id: '2B' },
-//     { name: 'Falafel', price: '$7.50', id: '3C' },
-//     { name: 'Marinated Olives', price: '$5.00', id: '4D' },
-//     { name: 'Kofta', price: '$6.00', id: '5E' },
-//     { name: 'Eggplant Salad', price: '$9.50', id: '6F' },
-//     { name: 'Lentil Burger', price: '$12.50', id: '7G' },
-//     { name: 'Smoked Salmon', price: '$18.00', id: '8H' },
-//     { name: 'Kofta Burger', price: '$12.50', id: '9I' },
-//     { name: 'Turkish Kebab', price: '$15.50', id: '10J' },
-//     { name: 'Fries', price: '$8.00', id: '11K' },
-//     { name: 'Buttered Rice', price: '$4.50', id: '12L' },
-//     { name: 'Bread Sticks', price: '$5.50', id: '13M' },
-//     { name: 'Pita Pocket', price: '$3.00', id: '14N' },
-//     { name: 'Lentil Soup', price: '$6.75', id: '15O' },
-//     { name: 'Greek Salad', price: '$8.50', id: '16Q' },
-//     { name: 'Rice Pilaf', price: '$7.00', id: '17R' },
-//     { name: 'Baklava', price: '$5.00', id: '18S' },
-//     { name: 'Tartufo', price: '$5.00', id: '19T' },
-//     { name: 'Tiramisu', price: '$6.00', id: '20U' },
-//     { name: 'Panna Cotta', price: '$5.00', id: '21V' },
-//   ];
-
-const menuItemsToDisplay = [
-  {
-    title: 'Appetizers',
-    data: [
-      'Hummus',
-      'Moutabal',
-      'Falafel',
-      'Marinated Olives',
-      'Kofta',
-      'Eggplant Salad',
-    ],
-  },
-  {
-    title: 'Main Dishes',
-    data: ['Lentil Burger', 'Smoked Salmon', 'Kofta Burger', 'Turkish Kebab'],
-  },
-  {
-    title: 'Sides',
-    data: [
-      'Fries',
-      'Buttered Rice',
-      'Bread Sticks',
-      'Pita Pocket',
-      'Lentil Soup',
-      'Greek Salad',
-      'Rice Pilaf',
-    ],
-  },
-  {
-    title: 'Desserts',
-    data: ['Baklava', 'Tartufo', 'Tiramisu', 'Panna Cotta'],
-  },
+const Appetizers = [
+  {id: '1', name: 'Hummus', price: '$5.00' },
+  {id: '2', name: 'Moutabal', price: '$5.00' },
+  {id: '3', name: 'Falafel', price: '$7.50' },
+  {id: '4', name: 'Marinated Olives', price: '$5.00'},
+  {id: '5', name: 'Kofta', price: '$5.00' },
+  {id: '6', name: 'Eggplant Salad', price: '$8.50' },
 ];
-  const Item = ({ name, price }) => (
-    <View style={styles.innerContainer}>
-      <Text style={styles.menuItem}>{name}</Text>
-      <Text style={styles.menuItem}>{price}</Text>
-    </View>
-  );
+const Main = [
+  {id: '7', name: 'Lentil Burger', price: '$10.00' },
+  {id: '8', name: 'Smoked Salmon', price: '$14.00' },
+  {id: '9', name: 'Kofta Burger', price: '$11.00' },
+  {id: '10', name: 'Turkish Kebab', price: '$15.50' },
+];
+const Sides = [
+  {id: '11', name: 'Buttered Rice', price: '$3.00' },
+  {id: '12', name: 'Bread Sticks', price: '$3.00' },
+  {id: '13', name: 'Pita Pocket', price: '$3.00' },
+  {id: '14', name: 'Lentil Soup', price: '$3.75' },
+  {id: '15', name: 'Greek Salad', price: '$6.00' },
+  {id: '16', name: 'Rice Pilaf', price: '$4.00' },
+  {id: '17', name: 'Fries', price: '$3.00' },
+];
+const Desserts = [
+  {id: '18', name: 'Baklava', price: '$3.00' },
+  {id: '19', name: 'Tartufo', price: '$3.00' },
+  {id: '20', name: 'Tiramisu', price: '$5.00' },
+  { id: '21', name: 'Panna Cotta', price: '$5.00'},
+];
+const Item = ({ name, price }) => (
+  <View style={styles.innerContainer}>
+    <Text style={styles.menuItem}>{name}</Text>
+    <Text style={styles.menuItem}>{price}</Text>
+  </View>
+);
+const Separator = () => <View style={styles.separator} />;
 
 export default function MenuItems() {
-  const renderItem = ({ item }) => <Item name={item} />;
+  const renderItem = ({ item }) => <Item name={item.name} price={item.price}/>;
   const renderSectionHeader = ({ section: { title } }) => (
     <Text style={styles.sectionHeader}>{title}</Text>
   );
@@ -122,9 +51,17 @@ export default function MenuItems() {
         </View>
         <SectionList
         keyExtractor={(item, index) => item + index}
-        sections={menuItemsToDisplay}
+        sections={
+          [
+            {title: 'Appetizers', data: Appetizers},
+            {title: 'Main Dishes', data: Main},
+            {title: 'Sides', data: Sides},
+            {title: 'Desserts', data: Desserts},
+          ]
+        }
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
+        ItemSeparatorComponent={Separator}
         ></SectionList>
       </View>
     );
@@ -149,6 +86,8 @@ const styles = StyleSheet.create({
       paddingHorizontal: 40,
       paddingVertical: 20,
       backgroundColor: '#333333',
+      display: 'flex',
+      flexDirection: 'row',
     },
     sectionHeader: {
       backgroundColor: '#fbdabb',
@@ -162,6 +101,10 @@ const styles = StyleSheet.create({
       fontSize: 25,
       height: 44,
       color: '#EDEFEE',
+    },
+    separator: {
+      borderBottomWidth: 1,
+      borderColor: '#EDEFEE',
     },
   });
   
